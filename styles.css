@@ -2,12 +2,11 @@
 
 :root {
   --bgColor: #c91a9d;
-  --bgColor2: #090a0f;
+  --bgColor2: #181a25;
   --accentColor: #fff;
   --font: "Karla", sans-serif;
   --delay: 0.3s;
 }
-
 body {
   margin: 0;
   padding: 0;
