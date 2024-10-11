@@ -851,3 +851,37 @@ iframe {
     height: 70px; /* Ajusta a altura para dispositivos muito pequenos */
   }
 }
+
+/* Footer styling */
+#footer {
+  position: relative; /* Allows positioning without affecting other elements */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; /* Center text */
+  padding: 20px 15px; /* Add padding, more vertical space */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+  font-size: 16px; /* Increase font size for better readability */
+  margin-top: 20px; /* Space above the footer */
+  z-index: 10; /* Ensure it appears above other content */
+  border-top: 2px solid #ffcc00; /* Add a top border for separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+  color: white;
+}
+
+/* Additional styling for the footer text */
+#footer p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Optional: Add a link style for footer links */
+.footer-link {
+  color: #ffcc00; /* Change link color to a brighter yellow */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold for emphasis */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.footer-link:hover {
+  color: #ffffff; /* Change color on hover */
+}
