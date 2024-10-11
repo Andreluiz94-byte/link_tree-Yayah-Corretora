@@ -90,27 +90,31 @@ body {
 #hashtag {
   position: relative;
   padding-bottom: 20px;
-  color: var(--accentColor);
   font-size: 1rem;
   display: block;
   font-family: var(--font);
   width: 100%;
   text-align: center;
 
-  /*  animation   */
+  /*  animação   */
   overflow: hidden;
   background: linear-gradient(
     90deg,
     var(--bgColor),
-    var(--accentColor),
-    var(--bgColor)
+    #000,
+    /* Mudou para preto */ var(--bgColor)
   );
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 3s linear var(--delay) infinite;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-fill-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /* Mantenha transparente para o efeito de gradiente */
 }
 
 /*-------------------------animations-----------------------*/
@@ -815,7 +819,35 @@ body {
 }
 
 iframe {
-  width: 70%; /* Define a largura como 80% do contêiner */
-  height: 400px; /* Define a altura fixa do vídeo */
+  width: 90%; /* Define a largura como 80% do contêiner */
+  height: 420px; /* Define a altura fixa do vídeo */
   max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+}
+
+.logos {
+  display: flex; /* Usar flexbox para alinhar as imagens */
+  justify-content: center; /* Centraliza as imagens na linha */
+  gap: 10px; /* Espaço entre as imagens, opcional */
+  flex-wrap: wrap; /* Permite que as imagens se ajustem em múltiplas linhas se necessário */
+}
+
+.logos img {
+  width: 150px; /* Largura fixa para as imagens */
+  height: 100px; /* Altura fixa para as imagens */
+  object-fit: contain; /* Mantém a proporção sem cortar a imagem */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 600px) {
+  .logos img {
+    width: 120px; /* Ajusta a largura das imagens para telas menores */
+    height: 80px; /* Ajusta a altura das imagens para telas menores */
+  }
+}
+
+@media (max-width: 400px) {
+  .logos img {
+    width: 100px; /* Imagens ocupam uma largura menor em dispositivos muito pequenos */
+    height: 70px; /* Ajusta a altura para dispositivos muito pequenos */
+  }
 }
